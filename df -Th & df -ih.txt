@@ -1,0 +1,36 @@
+[root@drapiporpr01 ~]# df -Th
+Filesystem              Type      Size  Used Avail Use% Mounted on
+devtmpfs                devtmpfs  7.8G     0  7.8G   0% /dev
+tmpfs                   tmpfs     7.9G     0  7.9G   0% /dev/shm
+tmpfs                   tmpfs     7.9G   26M  7.8G   1% /run
+tmpfs                   tmpfs     7.9G     0  7.9G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root   xfs        10G   10G  244K 100% /
+/dev/mapper/rhel-usr    xfs       9.0G  4.8G  4.3G  53% /usr
+/dev/mapper/rhel-tmp    xfs       5.0G   70M  5.0G   2% /tmp
+/dev/sda1               xfs       495M  263M  233M  53% /boot
+/dev/mapper/rhel-opt    xfs       5.0G  133M  4.9G   3% /opt
+/dev/mapper/rhel-var    xfs        10G  2.8G  7.3G  28% /var
+/dev/mapper/rhel-home   xfs        10G  6.7G  3.4G  67% /home
+tmpfs                   tmpfs     1.6G  1.2M  1.6G   1% /run/user/42
+tmpfs                   tmpfs     1.6G     0  1.6G   0% /run/user/1001
+/dev/loop1              iso9660    11G   11G     0 100% /media
+/dev/mapper/data-datavg xfs       200G   12G  189G   6% /data
+[root@drapiporpr01 ~]# df -iTh
+Filesystem              Type     Inodes IUsed IFree IUse% Mounted on
+devtmpfs                devtmpfs   2.0M   473  2.0M    1% /dev
+tmpfs                   tmpfs      2.0M     1  2.0M    1% /dev/shm
+tmpfs                   tmpfs      2.0M   848  2.0M    1% /run
+tmpfs                   tmpfs      2.0M    17  2.0M    1% /sys/fs/cgroup
+/dev/mapper/rhel-root   xfs        111K  111K   747  100% /
+/dev/mapper/rhel-usr    xfs        4.5M  184K  4.4M    4% /usr
+/dev/mapper/rhel-tmp    xfs        2.5M    26  2.5M    1% /tmp
+/dev/sda1               xfs        250K   308  250K    1% /boot
+/dev/mapper/rhel-opt    xfs        2.5M    95  2.5M    1% /opt
+/dev/mapper/rhel-var    xfs        5.0M  4.0K  5.0M    1% /var
+/dev/mapper/rhel-home   xfs        5.0M    96  5.0M    1% /home
+tmpfs                   tmpfs      2.0M    24  2.0M    1% /run/user/42
+tmpfs                   tmpfs      2.0M    11  2.0M    1% /run/user/1001
+/dev/loop1              iso9660       0     0     0     - /media
+/dev/mapper/data-datavg xfs        100M     4  100M    1% /data
+[root@drapiporpr01 ~]#
+
