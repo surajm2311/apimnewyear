@@ -1,0 +1,39 @@
+[root@dcredminpr01 ~]# rpm -qa | grep buildah*
+buildah-1.22.3-2.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcredminpr01 ~]# rpm -qa | grep cockpit*
+cockpit-packagekit-251.1-1.el8.noarch
+subscription-manager-cockpit-1.28.21-3.el8.noarch
+cockpit-system-251.1-1.el8.noarch
+cockpit-storaged-251.1-1.el8.noarch
+cockpit-251.1-1.el8.x86_64
+cockpit-bridge-251.1-1.el8.x86_64
+cockpit-podman-33-1.module+el8.5.0+12582+56d94c81.noarch
+cockpit-ws-251.1-1.el8.x86_64
+[root@dcredminpr01 ~]# rpm -qa | grep conmon*
+conmon-2.0.29-1.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcredminpr01 ~]# rpm -qa | grep container-selinux*
+container-selinux-2.167.0-1.module+el8.5.0+12582+56d94c81.noarch
+[root@dcredminpr01 ~]# rpm -qa | grep containernetworking*
+containernetworking-plugins-1.0.0-1.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcredminpr01 ~]# rpm -qa | grep criu*
+subscription-manager-rhsm-certificates-1.28.21-3.el8.x86_64
+criu-3.15-3.module+el8.5.0+12582+56d94c81.x86_64
+subscription-manager-initial-setup-addon-1.28.21-3.el8.x86_64
+dnf-plugin-subscription-manager-1.28.21-3.el8.x86_64
+subscription-manager-1.28.21-3.el8.x86_64
+crypto-policies-scripts-20210617-1.gitc776d3e.el8.noarch
+subscription-manager-cockpit-1.28.21-3.el8.noarch
+initscripts-10.00.15-1.el8.x86_64
+ghostscript-9.27-1.el8.x86_64
+libquvi-scripts-0.9.20131130-9.el8.noarch
+python3-subscription-manager-rhsm-1.28.21-3.el8.x86_64
+plymouth-scripts-0.9.4-10.20200615git1e36e30.el8.x86_64
+enscript-1.6.6-17.el8.x86_64
+[root@dcredminpr01 ~]# rpm -qa | grep runc*
+systemtap-runtime-4.5-3.el8.x86_64
+runc-1.0.2-1.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcredminpr01 ~]# rpm -qa | grep seabios*
+seabios-bin-1.13.0-2.module+el8.3.0+7353+9de0a3cc.noarch
+[root@dcredminpr01 ~]# rpm -qa | grep seavgabios*
+seavgabios-bin-1.13.0-2.module+el8.3.0+7353+9de0a3cc.noarch
+[root@dcredminpr01 ~]#
