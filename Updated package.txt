@@ -1,0 +1,40 @@
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^buildah
+buildah-1.22.3-2.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^cockpit-podman
+cockpit-podman-33-1.module+el8.5.0+12582+56d94c81.noarch
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^conmon
+conmon-2.0.29-1.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^container-selinux
+container-selinux-2.167.0-1.module+el8.5.0+12609+beaa716d.noarch
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^containernetworking
+containernetworking-plugins-1.0.0-1.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^criu
+criu-3.15-3.module+el8.5.0+12582+56d94c81.x86_64
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^runc
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^runc
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^runc
+[root@dcesbmwspr02 ~]# rpm -qa | grep runc
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^seabios
+seabios-bin-1.13.0-2.module+el8.3.0+7353+9de0a3cc.noarch
+[root@dcesbmwspr02 ~]# rpm -qa | grep ^seavgabios
+seavgabios-bin-1.13.0-2.module+el8.3.0+7353+9de0a3cc.noarch
+fuse-overlayfs-1.7.1-1.module+el8.5.0+12582+56d94c81.x86_64
+vim-filesystem-8.0.1763-16.el8_5.4.noarch
+vim-minimal-8.0.1763-16.el8_5.4.x86_64
+vim-common-8.0.1763-16.el8_5.4.x86_64
+vim-enhanced-8.0.1763-16.el8_5.4.x86_64
+aide-0.16-14.el8_5.1.x86_64
+httpd-filesystem-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.noarch
+httpd-tools-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.x86_64
+httpd-devel-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.x86_64
+httpd-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.x86_64
+httpd-manual-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.noarch
+mod_ssl-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.x86_64
+runc-1.0.2-1.module+el8.5.0+12582+56d94c81.x86_64
+
+
+httpd-filesystem-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.noarch
+httpd-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.x86_64
+httpd-tools-2.4.37-43.module+el8.5.0+13806+b30d9eec.1.x86_64
+mod_http2-1.15.7-3.module+el8.4.0+8625+d397f3da.x86_64
+
