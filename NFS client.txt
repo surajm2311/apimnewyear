@@ -1,0 +1,104 @@
+[root@dcwmmsrpr01 ~]# telnet 10.142.15.250 111
+Trying 10.142.15.250...
+Connected to 10.142.15.250.
+Escape character is '^]'.
+^CConnection closed by foreign host.
+[root@dcwmmsrpr01 ~]# rpcinfo -p
+   program vers proto   port  service
+    100000    4   tcp    111  portmapper
+    100000    3   tcp    111  portmapper
+    100000    2   tcp    111  portmapper
+    100000    4   udp    111  portmapper
+    100000    3   udp    111  portmapper
+    100000    2   udp    111  portmapper
+    100024    1   udp  29227  status
+    100024    1   tcp  35809  status
+[root@dcwmmsrpr01 ~]# clear
+[root@dcwmmsrpr01 ~]# rpcinfo -p
+   program vers proto   port  service
+    100000    4   tcp    111  portmapper
+    100000    3   tcp    111  portmapper
+    100000    2   tcp    111  portmapper
+    100000    4   udp    111  portmapper
+    100000    3   udp    111  portmapper
+    100000    2   udp    111  portmapper
+    100024    1   udp  29227  status
+    100024    1   tcp  35809  status
+[root@dcwmmsrpr01 ~]# rpcinfo -p 10.142.15.250
+   program vers proto   port  service
+    100000    4   tcp    111  portmapper
+    100000    3   tcp    111  portmapper
+    100000    2   tcp    111  portmapper
+    100000    4   udp    111  portmapper
+    100000    3   udp    111  portmapper
+    100000    2   udp    111  portmapper
+    100005    1   udp  20048  mountd
+    100005    1   tcp  20048  mountd
+    100005    2   udp  20048  mountd
+    100005    2   tcp  20048  mountd
+    100005    3   udp  20048  mountd
+    100005    3   tcp  20048  mountd
+    100024    1   udp  34350  status
+    100024    1   tcp  50435  status
+    100003    3   tcp   2049  nfs
+    100003    4   tcp   2049  nfs
+    100227    3   tcp   2049  nfs_acl
+    100021    1   udp  44385  nlockmgr
+    100021    3   udp  44385  nlockmgr
+    100021    4   udp  44385  nlockmgr
+    100021    1   tcp  37153  nlockmgr
+    100021    3   tcp  37153  nlockmgr
+    100021    4   tcp  37153  nlockmgr
+[root@dcwmmsrpr01 ~]# telnet 10.142.15.250 111
+Trying 10.142.15.250...
+Connected to 10.142.15.250.
+Escape character is '^]'.
+^CConnection closed by foreign host.
+[root@dcwmmsrpr01 ~]# telnet 10.142.15.250 2049
+Trying 10.142.15.250...
+Connected to 10.142.15.250.
+Escape character is '^]'.
+^CConnection closed by foreign host.
+[root@dcwmmsrpr01 ~]# nslookup 10.142.15.250
+** server can't find 250.15.142.10.in-addr.arpa: NXDOMAIN
+
+[root@dcwmmsrpr01 ~]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.144.17.33    vropsdc.idbibank.ad
+10.144.17.31    vropsdc01.idbibank.ad
+10.144.17.32    vropsdc02.idbibank.ad
+10.168.50.37    vropsdr.idbibank.ad
+10.168.50.35    vropsdr01.idbibank.ad
+10.168.50.36    vropsdr02.idbibank.ad
+10.144.18.29 ARYA.IDBIBANK.ad
+[root@dcwmmsrpr01 ~]# nslookup dckubmpr02
+;; Got SERVFAIL reply from 10.144.18.75, trying next server
+Server:         10.144.18.76
+Address:        10.144.18.76#53
+
+** server can't find dckubmpr02: SERVFAIL
+
+[root@dcwmmsrpr01 ~]#
+[root@dcwmmsrpr01 ~]# showmount -e 10.142.15.250
+Export list for 10.142.15.250:
+/datadump02 10.142.15.*
+[root@dcwmmsrpr01 ~]# mount -t nfs 10.142.15.250:/datadump02 /nfs_data -vvv
+mount.nfs: timeout set for Thu Mar 31 15:45:46 2022
+mount.nfs: trying text-based options 'vers=4.2,addr=10.142.15.250,clientaddr=10.142.15.248'
+mount.nfs: mount(2): Permission denied
+mount.nfs: trying text-based options 'vers=4,minorversion=1,addr=10.142.15.250,clientaddr=10.142.15.248'
+mount.nfs: mount(2): Permission denied
+mount.nfs: trying text-based options 'vers=4,addr=10.142.15.250,clientaddr=10.142.15.248'
+mount.nfs: mount(2): Permission denied
+mount.nfs: trying text-based options 'addr=10.142.15.250'
+mount.nfs: prog 100003, trying vers=3, prot=6
+mount.nfs: trying 10.142.15.250 prog 100003 vers 3 prot TCP port 2049
+mount.nfs: prog 100005, trying vers=3, prot=17
+mount.nfs: trying 10.142.15.250 prog 100005 vers 3 prot UDP port 20048
+mount.nfs: mount(2): Permission denied
+mount.nfs: access denied by server while mounting 10.142.15.250:/datadump02
+[root@dcwmmsrpr01 ~]# cat /proc/self/mounts | grep -i nfs
+sunrpc /var/lib/nfs/rpc_pipefs rpc_pipefs rw,relatime 0 0
+[root@dcwmmsrpr01 ~]#
+
