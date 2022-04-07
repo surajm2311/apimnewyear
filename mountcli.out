@@ -1,0 +1,8 @@
+mount.nfs: trying 10.142.15.250 prog 100003 vers 3 prot TCP port 2049
+mount.nfs: trying 10.142.15.250 prog 100005 vers 3 prot UDP port 20048
+mount.nfs: mount(2): Permission denied
+mount.nfs: access denied by server while mounting 10.142.15.250:/datadump02
+mount.nfs: timeout set for Thu Apr  7 10:35:03 2022
+mount.nfs: trying text-based options 'vers=3,addr=10.142.15.250'
+mount.nfs: prog 100003, trying vers=3, prot=6
+mount.nfs: prog 100005, trying vers=3, prot=17
